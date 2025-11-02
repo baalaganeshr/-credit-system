@@ -17,6 +17,41 @@
         cursor: default;
       }
       
+      /* Mobile-first optimizations */
+      @media (max-width: 640px) {
+        body {
+          background-size: 20px 20px;
+        }
+        
+        /* Better touch targets */
+        button, a, input, select, textarea {
+          min-height: 44px;
+        }
+        
+        /* Prevent zoom on input focus */
+        input, select, textarea {
+          font-size: 16px !important;
+        }
+      }
+      
+      /* Extra small breakpoint */
+      @media (max-width: 475px) {
+        .xs\:hidden {
+          display: none;
+        }
+      }
+      
+      @media (min-width: 475px) {
+        .xs\:inline {
+          display: inline;
+        }
+      }
+      
+      /* Safe area for iOS devices */
+      .safe-area-inset-top {
+        padding-top: env(safe-area-inset-top);
+      }
+
       /* Custom Cursor */
       #cursor-glow {
         position: fixed;
