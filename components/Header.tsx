@@ -66,21 +66,19 @@ const Header: React.FC<HeaderProps> = ({ users, authenticatedUser, onSwitchUser,
                     </button>
                   ))}
                 </div>
-                {authenticatedUser.role === UserRole.FACULTY && (
-                  <div className="border-t border-gray-700 p-2">
-                    <span className="px-2 py-1 text-xs font-semibold text-gray-400">Faculty</span>
-                    {facultyUsers.map(user => (
-                      <button 
-                        key={user.id}
-                        onClick={() => { onSwitchUser(user.id); setIsDropdownOpen(false); }}
-                        className="w-full text-left flex items-center justify-between px-3 py-2 text-sm rounded-md hover:bg-gray-700 transition-colors"
-                      >
-                        <span>{user.name}</span>
-                        {user.id === authenticatedUser.id && <CheckIcon className="h-4 w-4 text-cyan-400" />}
-                      </button>
-                    ))}
-                  </div>
-                )}
+                <div className="border-t border-gray-700 p-2">
+                  <span className="px-2 py-1 text-xs font-semibold text-gray-400">Faculty</span>
+                  {facultyUsers.map(user => (
+                    <button 
+                      key={user.id}
+                      onClick={() => { onSwitchUser(user.id); setIsDropdownOpen(false); }}
+                      className="w-full text-left flex items-center justify-between px-3 py-2 text-sm rounded-md hover:bg-gray-700 transition-colors"
+                    >
+                      <span>{user.name}</span>
+                      {user.id === authenticatedUser.id && <CheckIcon className="h-4 w-4 text-cyan-400" />}
+                    </button>
+                  ))}
+                </div>
              </div>
           )}
         </div>
