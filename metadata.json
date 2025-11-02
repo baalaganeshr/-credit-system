@@ -1,0 +1,5 @@
+{
+  "name": "Student Project Credit Exchange",
+  "description": "A minimalistic dark-themed web app for a Student Project Credit Exchange System. Students submit projects for credits and can redeem them to skip assignments or tutorials. Faculty members review and approve submissions and redemptions.",
+  "requestFramePermissions": []
+}
